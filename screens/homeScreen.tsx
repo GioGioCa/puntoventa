@@ -3,17 +3,13 @@ import React from "react";
 import { Text, TouchableOpacity, View } from 'react-native';
 import styles from '../Styles';
 import { Header } from 'react-native/Libraries/NewAppScreen';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { NavigationProp } from '@react-navigation/native';
-import { useNavigation } from '@react-navigation/native';
 
 
 //const navigation = useNavigation();
 
 
 
-const homeScreen = (props:any) => {
+const HomeScreen = (props:any) => {
         return (
             // Toda la ventana
             <View style={styles.container}>
@@ -35,4 +31,4 @@ const homeScreen = (props:any) => {
         </View>
         );
 };
-export default homeScreen;
+export default HomeScreen;

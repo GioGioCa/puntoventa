@@ -1,12 +1,15 @@
 /* eslint-disable prettier/prettier */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react';
 import {View, Text, TextInput, Button, ScrollView, Alert} from 'react-native';
 import styles from '../Styles';
+
+//Firebase
 import appFirebase from '../credenciales';
 import {getFirestore, collection,addDoc,doc,deleteDoc,getDoc,setDoc} from 'firebase/firestore';
 
 const db = getFirestore(appFirebase);
-export default function agregarProducto(props:any) {
+export default function AgregarProducto(props:any) {
     const initialState = {
         nombre:'',
         precio:'',
@@ -28,7 +31,7 @@ export default function agregarProducto(props:any) {
             Alert.alert('Alerta','guardado con exito');
             props.navigation.navigate('inventoryScreen');
         }catch{
-
+            console.log("Error al guardar");
         }
     }
 
@@ -48,7 +51,6 @@ export default function agregarProducto(props:any) {
                 <TextInput placeholder='Stock' onChangeText={(value)=>handleChangeText(value,'stock')}
                 value={state.stock}/>
             </View>
-
             <View>
                 <Button title='Guardar Producto'/>
             </View>

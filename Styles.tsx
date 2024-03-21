@@ -48,6 +48,22 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: '#CCCCCC',
     },
+    txtNombre: {
+        fontSize:16,
+    },
+    btnLista: {
+        backgroundColor:'#DDDDDD',
+        borderBottomWidth:1,
+        borderBottomColor:'#cccccc',
+        marginBottom:3,
+        padding:5,
+    },
+    btnDelete: {
+        backgroundColor: '#E74C3C',
+        borderRadius: 30,
+        height: 30,
+        textAlign: 'center',
+    },
 });
 
 export default styles;
