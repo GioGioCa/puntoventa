@@ -1,10 +1,12 @@
 /* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
-import {View, Text, TextInput, Button, ScrollView} from 'react-native';
+import {View, Text, TextInput, Button, ScrollView, Alert} from 'react-native';
 import styles from '../Styles';
+import appFirebase from '../credenciales';
+import {getFirestore, collection,addDoc,doc,deleteDoc,getDoc,setDoc} from 'firebase/firestore';
 
-
-export default function agregarProducto() {
+const db = getFirestore(appFirebase);
+export default function agregarProducto(props:any) {
     const initialState = {
         nombre:'',
         precio:'',
@@ -18,8 +20,16 @@ export default function agregarProducto() {
 
     };
 
-    const saveProduct = () => {
-        
+    const saveProduct = async() => {
+        try{
+            await addDoc(collection(db,'productos'),{
+                ...state,
+            });
+            Alert.alert('Alerta','guardado con exito');
+            props.navigation.navigate('inventoryScreen');
+        }catch{
+
+        }
     }
 
     return(
