@@ -11,7 +11,7 @@ const inventoryScreen = (props: any) => {
             <ScrollView>
                 <View style={styles.container}>
                     <Header styles={styles.title}>Inventory</Header>
-                    <TouchableOpacity style={styles.btnAgregar} onPress={() => props.navigation.navigate('agregar')}>
+                    <TouchableOpacity style={styles.btnAgregar} onPress={() => props.navigation.navigate('agregarProducto')}>
                         <Text style={styles.btnTxt}>Agregar productos</Text>
                     </TouchableOpacity>
                 </View>

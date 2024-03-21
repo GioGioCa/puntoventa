@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 25,
         color: '#273746',
+        textAlign: 'center',
     },
     btnContainer: {
         flexDirection: 'column',
@@ -39,8 +40,13 @@ const styles = StyleSheet.create({
         backgroundColor: '#2E86C1',
         borderRadius: 30,
         height: 30,
-
-
+    },
+    inputGroup: {
+        flex: 1,
+        padding: 0,
+        marginBottom: 20,
+        borderBottomWidth: 1,
+        borderBottomColor: '#CCCCCC',
     },
 });
 
