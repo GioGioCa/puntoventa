@@ -4,6 +4,10 @@ import styles from './Styles';
 import RenderItem from './components/renderItem';
 import {Header} from 'react-native/Libraries/NewAppScreen';
 
+//importar los componentes
+import inventoryScreen from './screens/inventoryScreen';
+import storeScreen from './screens/storeScreen';
+
 export default function App() {
   return (
     // Toda la ventana
