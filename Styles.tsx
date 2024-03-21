@@ -33,6 +33,14 @@ const styles = StyleSheet.create({
     btnTxt: {
         fontSize: 20,
         color: '#F7F9F9',
+        textAlign: 'center',
+    },
+    btnAgregar: {
+        backgroundColor: '#2E86C1',
+        borderRadius: 30,
+        height: 30,
+
+
     },
 });
 

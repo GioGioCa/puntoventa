@@ -5,15 +5,16 @@ import RenderItem from './components/renderItem';
 import {Header} from 'react-native/Libraries/NewAppScreen';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
 //importar los componentes
 import inventoryScreen from './screens/inventoryScreen';
 import storeScreen from './screens/storeScreen';
 import homeScreen from './screens/homeScreen';
 
-
-export default function App() {
+function App() {
   const Stack = createStackNavigator();
+  const navigation = useNavigation();
 
   return (
     <NavigationContainer>
@@ -25,3 +26,5 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+export default App;
